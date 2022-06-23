@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="jQueryWorkshop.css">
+
+    <script>
+        $(document).ready(function(){
+          $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $(".image-list-small li").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+        </script>
+</head>
+<body>
+    <header>
+        <h1>Our Store</h1>
+    </header>
+    <input id="myInput" type="text" placeholder="Search..">
+    <ul class="image-list-small">
+        <li>
+          <img src="candy.jfif">
+          <div class="details">
+            Candy
+          </div>
+        </li>
+        <li>
+          <img src="cupckae.jfif">
+          <div class="details">
+            Cup Cake
+          </div>
+        </li>
+        <li>
+          <img src="chocolate-cake.jfif">
+          <div class="details">
+            Chocolate Cake
+          </div>
+        </li>
+        <li>
+          <img src="cakePops.jfif">
+          <div class="details">
+            Cake Pops
+          </div>
+        </li>
+        <li>
+          <img src="doughnut.jfif">
+          <div class="details">
+           Doughnut
+          </div>
+        </li>
+        <li>
+          <img src="mapleCreamCake.jfif">
+          <div class="details">
+            Maple Cream Cake
+          </div>
+        </li>
+    </ul>
+</body>
+</html>
