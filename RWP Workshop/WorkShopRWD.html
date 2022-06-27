@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        /* .container{
+        display:flex;
+        flex-direction: row;
+        gap: 20px;
+    } */
+    nav,footer{
+        background-color: pink;
+    }
+    ul li{
+        list-style: none;
+        float:right;
+    }
+    li{
+        display: inline-flex;
+        align-items: flex-end;
+        margin-left: 15px;
+    }
+        #bigdiv {
+            row-gap: 10px;
+        }
+
+        .container1 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+
+        }
+
+        .container2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+
+        }
+
+        .container2 div {
+            background-color: blanchedalmond;
+        }
+
+        .container3 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+
+            gap: 10px;
+
+
+        }
+
+        .butcontainer {
+            height: 200px;
+            position: relative;
+            background-color: aquamarine;
+
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+            LOGO
+            <li>Contact Us</li>
+            <li>Services</li>
+            <li>About Us</li>
+            <li>Home</li>
+           
+            
+            </ul>
+
+        </nav>
+
+
+    </header>
+
+
+
+
+    <div class="container1">
+        <div>
+            <img src="luke-stackpoole-SB9qgWA0xao-unsplash.jpg" alt="image" height="300px" width="100%">
+        </div>
+
+        <div>
+            <img src="obi-pixel6propix-wjmDIOf7Tps-unsplash.jpg" alt="image" height="300px" width="100%">
+        </div>
+    </div>
+
+
+    <div class="container2">
+        <div>
+            <h1>First Article</h1>
+            Grab your access to trustworthy & authentic news at ₹899/year only. Subscribe now & save. Convenient and
+            affordable digital access to daily editions of The Hindu. Subscribe Today. Editorial Contents. Unlimited
+            access. Faster reading experience. Access Archive. Daily Quiz.
+        </div>
+        <div>
+            <h1>Second Article</h1>
+            International Yoga Day live updates | PM Modi leads celebrations, says it is forming basis for
+            international cooperation
+        </div>
+        <div>
+            <h1>Third Article</h1>
+            iOS 16 to come with CAPTCHA bypassing capabilities on supported apps and websites to improve user
+            experience
+            Proving you are a human to access content is about to get a whole lot easier for iOS users with the
+            launch of iOS 16, which introduces support for bypassing CAPTCHAs in supported apps and websites.
+        </div>
+    </div>
+    <div class="container3">
+        <div style="background-color: aquamarine;">
+            <h1>First Article</h1>
+            Grab your access to trustworthy & authentic news at ₹899/year only. Subscribe now & save. Convenient and
+            affordable digital access to daily editions of The Hindu. Subscribe Today. Editorial Contents. Unlimited
+            access. Faster reading experience. Access Archive. Daily Quiz.
+        </div>
+
+        <div class="butcontainer">
+            <div class="center">
+                <button type="button" class="btn btn-danger">Danger</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        All rights reserved to Akshay and Aashay Do not copy this
+    </footer>
+</body>
+
+</html>
