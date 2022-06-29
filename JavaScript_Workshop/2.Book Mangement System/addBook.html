@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="book.js"></script>
+   
+</head>
+<body>
+
+    
+   
+   Book Id <br> <input type="number" id="id" ><br>
+   Book Author <br><input type="text" id="author"><br>
+   Book Name <br><input type="text" id="name"><br>
+   Book price <br><input type="number" id="price"><br>
+   <button type="submit" onclick="addBook()">submit</button><br><br>
+   
+   
+  <br> <button type="submit" id="list" onclick="getBooklist()">get book list</button><br>
+  <br><div id="list1"> </div>
+  <div>
+    <button type="submit" id="delete" onclick="deleteBook()">delete Book</button>&nbsp;&nbsp;
+   <input type="number">
+  </div>
+  <div>
+    <button type="submit" id="edit">Edit book</button>
+  </div>
+</body>
+</html>

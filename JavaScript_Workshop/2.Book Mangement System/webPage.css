@@ -1,0 +1,72 @@
+.header
+{
+  background-color: deepskyblue;
+  color: antiquewhite;
+  width:100%;
+   font-size: 25px;
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-bottom: 40px;
+}
+.book
+{
+    padding: 15px 15px 15px 15px;
+   background-color: darkgoldenrod;
+   /* width: 250px; */
+}
+.book a
+{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+.footer
+{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding-top: 15px;
+    text-align: center;
+    color: rgb(93, 9, 9);
+    background-color: aqua;
+    height: 50px;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+ 
+  .column1 {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 300px;
+  }
+  
+  .column2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px;
+   
+  }
+  
+  .column3 {
+    float: left;
+    width: 24%;
+    padding: 10px;
+    height: 560px;
+    background-color: rgb(18, 184, 225);
+    margin-top: 30px;
+   
+  }
+  
+  
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+ 
