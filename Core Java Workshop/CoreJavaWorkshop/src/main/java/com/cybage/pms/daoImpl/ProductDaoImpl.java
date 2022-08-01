@@ -15,7 +15,6 @@ public class ProductDaoImpl implements ProductDao {
 	
 	Connection connection= JDBCUtility.getConnection();
 	
-	@Override
 	public Product getProductById(int productId) {
 		try {
 			String sql="select * from product where id=?";
@@ -35,7 +34,6 @@ public class ProductDaoImpl implements ProductDao {
 		return null;
 	}
 
-	@Override
 	public void addProduct(Product product) {
 		try {
 			String sql="insert into product values(?,?,?)";
@@ -51,9 +49,8 @@ public class ProductDaoImpl implements ProductDao {
 
 	}
 
-	@Override
 	public List<Product> getAllProduct() {
-		List<Product> products=new ArrayList<>();
+		List<Product> products=new ArrayList<Product>();
 		
 		try {
 			String sql="select * from product";
@@ -70,7 +67,6 @@ public class ProductDaoImpl implements ProductDao {
 		return null;
 	}
 
-	@Override
 	public void deleteProduct(int productId) {
 		try {		
 				String sql="delete from product where id=?";
