@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
@@ -53,17 +52,17 @@ public class BookController {
 	}
 	
 	@GetMapping("/editBook/{id}")
-	public ModelAndView shwoEditForm(@PathVariable int id) {
-		Book book = new Book();
+	public ModelAndView showEditForm(@PathVariable int id) {
+		Book book = bookService.getBookById(id);
 		return new ModelAndView("editBook", "book", book);
 	}
 
-	@PutMapping("/")
+	@PostMapping("/editBook/")
 	public ModelAndView editTutorial(@Valid @ModelAttribute Book book, BindingResult result) {
 		if (result.hasErrors()) {
 			return new ModelAndView("editBook", "book", book);
 		} else {
-			
+			bookService.editBook(book);
 			return new ModelAndView("book","bookList",bookService.getBooks());
 		}
 	}

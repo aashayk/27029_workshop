@@ -44,22 +44,14 @@ public class BookService {
 	}
 
 	public void deleteBook(int id) {
-		for (int i = 0; i < bookList.size(); i++) {
-			if (bookList.get(i).getId() == id)
-				bookList.remove(i);
-		}
+		bookList.remove(getBookById(id));
 
 	}
 
 	public void editBook(Book book) {
+		deleteBook(book.getId());
+		bookList.add(book);
 		System.out.println(book);
-		for (int i = 0; i < bookList.size(); i++) {
-			if (book.getId() == bookList.get(i).getId())
-				System.out.println(bookList.get(i));
-				//bookList.get(i).setTitle(book.getTitle());
-			//bookList.get(i).setAuthor(book.getAuthor());
-			//bookList.get(i).setPublisher(book.getPublisher());
-		}
 
 	}
 }
