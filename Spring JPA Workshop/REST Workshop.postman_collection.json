@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "555f4a8b-5610-4368-8280-fd5328b6a8ae",
+		"name": "REST Workshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookTitle\":\"Harry Potter\",\r\n    \"bookAuthor\":{\r\n        \"authorEmailId\":\"JK@gmail.com\",\r\n        \"authorName\":\"J K Rowling\",\r\n        \"authorContactNumber\":\"12345\"\r\n    },\r\n    \"bookPublisher\":\"Bloomsberry\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/book/addBook",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"book",
+						"addBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Author",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorEmailId\":\"Jsai@gmail.com\",\r\n    \"authorName\":\"J Sai Deepak\",\r\n    \"authorContactNumber\":\"78978\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/author/addAuthor",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"author",
+						"addAuthor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/book/getAllBooks",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"book",
+						"getAllBooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Author By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/author/findByAuthorName/{{Author}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"author",
+						"findByAuthorName",
+						"{{Author}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\":1,\r\n    \"bookTitle\":\"India That is Bharat\",\r\n    \"bookAuthor\":{\r\n        \"authorEmailId\":\"Jsai22@gmail.com\",\r\n        \"authorName\":\"J Sai Deepak\",\r\n        \"authorContactNumber\":\"78978\"\r\n    },\r\n    \"bookPublisher\":\"Penguine\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/book/editBook/1",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"book",
+						"editBook",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/book/deleteBook/4",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"book",
+						"deleteBook",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find By Book Title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/book/findByBookTitle/{{Book}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"book",
+						"findByBookTitle",
+						"{{Book}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Book By Publisher Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/book/findByBookPublisher/{{Publisher}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"book",
+						"findByBookPublisher",
+						"{{Publisher}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "localhost:8090",
+			"type": "default"
+		},
+		{
+			"key": "Book",
+			"value": "India That is Bharat"
+		},
+		{
+			"key": "Author",
+			"value": "J sai Deepak"
+		},
+		{
+			"key": "Publisher",
+			"value": "Bloomsberry"
+		},
+		{
+			"key": "AuthorEmail",
+			"value": "Jsai22@gmail.com"
+		}
+	]
+}
